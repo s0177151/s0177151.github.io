@@ -1,0 +1,12 @@
+h5 { 
+    font-size: 120%; 
+    font-family: Arial, Helvetica, sans-serif; 
+    color: green; 
+   }
+.main{
+    max-width:800px; 
+    background-color:#fa6161; 
+    margin: 0 auto; 
+    margin-top:20px; 
+    padding:10px;
+}

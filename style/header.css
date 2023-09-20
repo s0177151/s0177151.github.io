@@ -1,0 +1,27 @@
+h3 {
+    color: #09ff00;
+    font-size: 200%;
+    font-family: Arial, Verdana, sans-serif;
+    text-align: center;
+  }
+  .headerbox{
+    width:100%; 
+    background-color:#cc0606; 
+    padding: 10px; 
+    height:130px;
+  }
+  .headerlink{
+    background-color:#b16161;  
+    margin-top:0px; 
+    padding:45px;
+    height:30px;
+  }
+.headers{
+    float:right; 
+    max-width:0 auto; 
+    bottom:20px; 
+    background-color:#b16161; 
+    margin: 15px; 
+    margin-top:0px; 
+    padding:12px;
+}
