@@ -81,63 +81,61 @@
 
     <br /> 
           <img src="fWq16_3yf1U.jpg" style="width: 300px;" alt="numbers" usemap="#num1">
-          <map name="num1"><area shape="rect" coords="300,200,250,40" href="https://ru.wikipedia.org/wiki/Rammstein" alt="Rammstine"></map>
-          <map name="num1"><area shape="circle" coords="100,100,25,40" href="https://ru.wikipedia.org/wiki/Rammstein" alt="Rammstine"></map>
+          <map name="num1"><area shape="rect" coords="300,200,250,40" href="https://radioultra.ru/storage/64477/conversions/Lmq4A934_oA-social.jpg" alt="Rammstine"></map>
     
     </div>
 
-    <div b class="main"></b>
-
-      <h2 id="Heading_3"> <h1>Таблица<h1> </h2>
-      <table>
+  <div b class="main"></b>
+    
+    <h2 id="Heading_3"> <h1>Таблица<h1> </h2>
+      <table class="center">
         <tr>
-          <th >Колонка 1</th>
-          <th >Колонка 2</th>
-          <th >Колонка 3</th>
-          <th>Колонка 4</th>
+          <th>col 1</th>
+          <th>col 2</th>
+          <th>col 3</th>
+          <th>col 4</th>
         </tr>
         <tr>
-          <td>Ячейка 11</td>
-          <td >Ячейка 12</td>
-          <td >Ячейка 13</td>
-          <td>Ячейка 14</td>
+          <td colspan="4">Ячейка 1</td>
         </tr>
         <tr>
-          <td>Ячейка 21</td>
-          <td>Ячейка 22</td>
-          <td>Ячейка 23</td>
-          <td>Ячейка 24</td>
+          <td>Ячейка 2.1</td>
+          <td>Ячейка 2.2</td>
+          <td>Ячейка 2.3</td>
+          <td>Ячейка 2.4</td>
         </tr>
         <tr>
-          <td>Ячейка 31</td>
-          <td>Ячейка 32</td>
-          <td>Ячейка 33</td>
-          <td>Ячейка 34</td>
+          <td>Ячейка 3.1</td>
+          <td>Ячейка 3.2</td>
+          <td>Ячейка 3.3</td>
+          <td>Ячейка 3.4</td>
+        </tr>
+          <tr>
+          <td>Ячейка 4.1</td>
+          <td>Ячейка 4.2</td>
+          <td>Ячейка 4.3</td>
+          <td>Ячейка 4.4</td>
         </tr>
         <tr>
-          <td>Ячейка 41</td>
-          <td>Ячейка 42</td>
-          <td>Ячейка 43</td>
-          <td>Ячейка 44</td>
+          <td colspan="4">Ячейка 5</td>
         </tr>
         <tr>
-          <td>Ячейка 51</td>
-          <td>Ячейка 52</td>
-          <td>Ячейка 53</td>
-          <td>Ячейка 54</td>
+          <td>Ячейка 6.1</td>
+          <td>Ячейка 6.2</td>
+          <td>Ячейка 6.3</td>
+          <td>Ячейка 6.4</td>
         </tr>
         <tr>
-          <td>Ячейка 61</td>
-          <td>Ячейка 62</td>
-          <td>Ячейка 63</td>
-          <td>Ячейка 64</td>
+          <td>Ячейка 7.1</td>
+          <td>Ячейка 7.2</td>
+          <td>Ячейка 7.3</td>
+          <td>Ячейка 7.4</td>
         </tr>
-      </table>
-  
-    </div>
-      
- 
-  </div>
+        <tr>
+          <td colspan="4">Ячейка 8</td>
+        </tr>
+        </table>
+      </div>
 
   <div b class="main"></b>
       <h2 id="Heading_2"> <h1>Форма</h1></h2>
@@ -152,74 +150,60 @@
     
     
     
-      <label>
-        ФИО:<br />
-        <input name="FIO"
-          value="Введите ФИО" />
-      </label><br />
+      <label for="field-fio">
+        <form action="doit" id="formid" method="POST">
+
+          <label for="field-fio">
+            Поле ФИО:<br />
+            <input required id="field-fio" name="field-fio" placeholder="Введите ваше ФИО" />
+          </label><br />
     
-      <label>
-        Введите номер <a href="https://ru.wikipedia.org/wiki/Телефон">  телефона <a></a> <br/>
-      <input type="tel" name="phone" 
-      pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-      </label><br />
-      
-      <label>
-        Email:<br />
-        <input name="field-email"
-          type="email"
-          placeholder="Введите вашу почту" />
-      </label><br />
+          <label for="field-tel">
+            Текстовое поле tel:<br /> </label>
+            <input required type="tel" id="field-tel" name="field-tel" placeholder="Введите телефон"/>
+          <br />
     
-      <label>
-        Дата рождения :<br />
-        <input name="Date_of_Birth"
-          value="2000-01-01"
-          type="date" />
-      </label><br />
+          <label>
+            Текстовое поле email:<br />
+            <input required name="field-email" type="email" placeholder="Введите вашу почту" />
+          </label><br />
     
-      Пол:<br />
-      <label><input type="radio" checked="checked"
-        name="radio-group-1" value="Мужчина " />
-        Мужчина </label>
-      <label><input type="radio"
-        name="radio-group-1" value="Женщина" />
-        Женжина </label><br />
+          <label>
+            Дата рождения:<br />
+            <input required name="field-date" value="2023-10-09" type="date" />
+          </label><br />
     
+          Ваш пол:<br />
+          <label><input required type="radio" name="radio-group-1" value="val1" /> Мужской</label>
+          <label><input type="radio" name="radio-group-1" value="val2" /> Женский</label><br />
     
-      <label>
-        Любимый язык программирование :
-        <br />
-        <select name="lang"
-          multiple="multiple">
-          <option value="Pascal">Pascal</option>
-          <option value="C" selected="selected">C</option>
-          <option value="C++" selected="selected">C++</option>
-          <option value="JavaScript"selected="selected">JavaScript</option>
-          <option value="PHP" selected="selected">PHP</option>
-          <option value="Python" selected="selected">Python</option>
-          <option value="Java" selected="selected">Java</option>
-          <option value="Haskel" selected="selected">Haskel</option>
-          <option value="Clojure" selected="selected">Clojure</option>
-          <option value="Prolog" selected="selected">Prolog</option>
-          <option value="Scala" selected="selected">Scala"</option>
-        </select>
-      </label><br />
+            <label>Любимый язык программирования:<br>
+              <select required class="sizedselect" name="field-mul" multiple="multiple">
+                <option value="1">Pascal</option>
+                <option value="2">C</option>
+                <option value="3">C++</option>
+                <option value="4">Javascript</option>
+                <option value="5">PHP</option>
+                <option selected value="6">Python</option>
+                <option value="7">Java</option>
+                <option value="8">Haskel</option>
+                <option value="9">Clojure</option>
+                <option value="10">Prolog</option>
+                <option value="11">Scala</option>
+              </select>
+            </label><br>
     
-      <label>
-        Биография:<br />
-        <textarea name="Biografy"></textarea>
-      </label><br />
+          <label>
+            Биография:<br />
+            <textarea name="txtarea" class="noresize" rows="7" cols="40" placeholder="Ваша биография"></textarea>
+          </label><br />
     
-      Чекбокс:<br />
-      <label><input type="checkbox" checked="checked"
-        name="check-1" />
-         С контрактом ознакомлен </label><br />
+          
+          <label for="checkboxagree"> <input required type="checkbox" name="check-1" id="checkboxagree" /> С контрактом ознакомлен </label> <br />
+          <br />
     
-      <label>
-        <button type="submit">Сохранить</button>
-      </label><br />
-      
+          <input type="submit" value="Сохранить" />
+        </form>
     </div>
 
   <div s class="foot">
