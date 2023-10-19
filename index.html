@@ -1,220 +1,181 @@
 <!DOCTYPE html>
 <html lang="ru">
+    <style>
+      body{
+       background-color: #27292b;
+       min-height: 100vh;
+      }
+    </style>
 
   <head>
-    <title>Dz_2</title>
+    <title>Dz_4</title>
+    <meta charset="UTF-8">
+
     <style>
     h1 {
-    color: #ffffff;
+    color: #000000;
     font-size: 200%;
     font-family: Arial, Verdana, sans-serif;
     text-align: center;
+
+    }
+    .round-link {
+      display: inline-block;
+      color: #fff;
+      text-decoration: none;
     }
     </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Задани 5 </title>
+   <meta name="viewport" content="width=width-device, initial-scale=1" />
+
+    
     <link rel="stylesheet" href="style/footer.css">
     <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/nav.css">
-
   </head>
-  <body style="margin:0;" >
+   
+  <body style="margin: 0px;" >
     
-  <div p class="headerbox"></p>
-     <p>
-
-    <img style="float:left; margin:10px; width:100px; height:100px;" src="234.jpg" alt="Описание картинки для скрин-ридеров и поисковиков" />
-
-      
-      <div k class="headers"></k>
-        <a href="#Heading_1"> Гиперсылки</a>
+      <header>
+      <div class="container_head">
+        <a class="header-logo">
+          <img style="float:left; width:40px; height:40px;" src="234.jpg"/>
+           <h3>Задание 5<h3>
+          </a>
+        </div>
       </div>
+    </header>
 
-      <div k class="headers"></k>
-        <a href="#Heading_3"> Таблица</a> 
-      </div>
-
-      <div k class="headers"></k>
-        <a href="#Heading_2"> Форма</a>
-      </div>
-  
-
-
-    <div d class="headerlink"></d><h1> Задание 2 </h1></div>
-    </p>
-  </div>
-  
-
-  <div b class="main"></b>
-  
-    <h1>Гиперсылки</h1>
-    <h2 id = "heading_1"></h2>
-    <br>
-    
-    <strong>Ссылка на  <a href="http://www.kubsu.ru/index.php">КубГу</a>  через http  </strong> </p>
-
-    <strong>Ссылка на   <a href="https://www.kubsu.ru/index.php">КубГу</a> через https  </strong> </p>
-
-    <strong><a href="https://clck.ru/35gdQH">Сокращенную ссылку на главную страницу</a>  </strong> </p>
-
-    <strong><a href="https://clck.ru/35bAgm">Сокращенную ссылку на главную страницу</a>  </strong> </p>
-    
-    <strong><a href="https://example.com/page.html?id=1311323">Ссылка с параметром ID</a> </strong> </p>
-    
-    <strong>Ссылка на стороний  <a href="https://ru.wikipedia.org/wiki/Высоцкий,_Владимир_Семёнович#:~:text=Влади́мир%20Семёнович%20Высо́цкий%20(25%20января,авторское%20исполнение%20песен»%2C%201987%2C%20посмертно)">сайт</a> через https  </strong> </p>
-    
-    <strong><strong>https ссылка на внутреннюю страницу сайта: </strong><a href="selection.html"> selection.html </a> .</strong> </p>
-    
-    <strong>https ссылка на внутреннюю страницу сайта: </strong><a href="about/algebra.html"> about/churchil.html </a> .</strong> </p>
-    
-    <strong><a href="https://example.com/?param1=value1&param2=value2&param3=value3">Ссылка с 3 параметрами</a></strong> </p>
-    
-    <strong>Внешняя ссылка на элемент через id: </strong><a href="https://ru.wikipedia.org/wiki/Википедия:Избранные_статьи#catlinks">https://ru.wikipedia.org/wiki/Википедия:Избранные_статьи#catlinks</a></strong> </p>
-    
-    <strong><a href="">Пустая ссылка </a></strong> </p>
-    
-    <strong> Запрещенная  <a href="https://horo.mail.ru/prediction/libra/today/" onclick="return false;"> ссылка </a>через https </strong> </p>
-    
-    <strong><a href="http://example.com/" rel="nofollow">Запрещенная для индексации ссылка </a></strong> </p>
-
-    <strong> <a href="ftp://example.com/path/to/file.zip">Ссылку на файл на сервере FTP с авторизацией;</a></strong> </p>
-
-    <img src="logo.png" alt="КубГу" style="width: 300px;" /></p>
+    <div clss="main-nav">
+      <main>
+        <div b class="main"></b>
+          <h1>Калькулятор стоимости заказа</h1>
+          <div class="calculator">
+            <label for="quantity">Количество:</label>
+            <input type="number" id="quantity">
+            
 
 
-          <img src="fWq16_3yf1U.jpg" style="width: 300px;" alt="numbers" usemap="#num1">
-          <map name="num1" >
-            <area shape="rect" coords="300,200,250,40"href="https://radioultra.ru/storage/64477/conversions/Lmq4A934_oA-social.jpg" alt="Rammstin">
-            <area shape="circle" coords="60,100,75"  href="https://rammstein-portugal.com/media/2019/05/rammstein-band-2019.jpg" alt="Rammstin">
-          </map>
-    
+            <label for="product">Товар:</label>
+            <select id="product" name="product">
+              <option value="product1">Месяц</option>
+              <option value="product2">Неделя</option>
+              <option value="product3">Суточно</option>
+            </select>
 
+            <div class="myradios" id="myradios">
+              <label><input type="radio" name="myradio" value="1.1" checked>Обед+Ужин </label>
+              <label><input type="radio" name="myradio" value="1.05">Обед</label>
+              <label><input type="radio" name="myradio" value="1">Без него </label>
 
-  <div b class="main"></b>
-    
-    <h2 id="Heading_3"> <h1>Таблица<h1> </h2>
-      <table class="center">
-        <tr>
-          <th>колонка 1</th>
-          <th>колонка 2</th>
-          <th>колонка 3</th>
-          <th>колонка 4</th>
-        </tr>
-        <tr>
-          <td colspan="4">Ячейка 1</td>
-        </tr>
-        <tr>
-          <td>Ячейка 2.1</td>
-          <td>Ячейка 2.2</td>
-          <td>Ячейка 2.3</td>
-          <td>Ячейка 2.4</td>
-        </tr>
-        <tr>
-          <td>Ячейка 3.1</td>
-          <td>Ячейка 3.2</td>
-          <td>Ячейка 3.3</td>
-          <td>Ячейка 3.4</td>
-        </tr>
-          <tr>
-          <td>Ячейка 4.1</td>
-          <td>Ячейка 4.2</td>
-          <td>Ячейка 4.3</td>
-          <td>Ячейка 4.4</td>
-        </tr>
-        <tr>
-          <td colspan="4">Ячейка 5</td>
-        </tr>
-        <tr>
-          <td>Ячейка 6.1</td>
-          <td>Ячейка 6.2</td>
-          <td>Ячейка 6.3</td>
-          <td>Ячейка 6.4</td>
-        </tr>
-        <tr>
-          <td>Ячейка 7.1</td>
-          <td>Ячейка 7.2</td>
-          <td>Ячейка 7.3</td>
-          <td>Ячейка 7.4</td>
-        </tr>
-        <tr>
-          <td colspan="4">Ячейка 8</td>
-        </tr>
-        </table>
-      </div>
-
-  <div b class="main"></b>
-      <h2 id="Heading_2"> <h1>Форма</h1></h2>
-
-      <ol>
-        <li><a href="http://www.kubsu.ru/index.php" title="">Ссылка на КубГу </a></li>
-        <li><a href="https://www.kubsu.ru/index.phpl" title="">Ссылка на КубГу </a></li>
-        <li><a href="https://example.com/page.html?id=1311323" title="">Ссылка с параметром ID </a></li>
-        <li><a href="https://example.com/?param1=value1&param2=value2&param3=value3" title="">Ссылка с 3 параметрами </a></li>
-        <li><a href="https://ru.wikipedia.org/wiki/Википедия:Избранные_статьи#catlinks" title="">Внешняя ссылка на элемент через id </a></li>
-      </ol>
-    
-    
-    
-      <label for="field-fio">
-        <form action="doit" id="formid" method="POST">
-
-          <label for="field-fio">
-            Поле ФИО:<br />
-            <input required id="field-fio" name="field-fio" placeholder="Введите ваше ФИО" />
-          </label><br />
-    
-          <label for="field-tel">
-            Текстовое поле tel:<br /> </label>
-            <input required type="tel" id="field-tel" name="field-tel" placeholder="Введите телефон"/>
-          <br />
-    
-          <label>
-            Текстовое поле email:<br />
-            <input required name="field-email" type="email" placeholder="Введите вашу почту" />
-          </label><br />
-    
-          <label>
-            Дата рождения:<br />
-            <input required name="field-date" value="2023-10-09" type="date" />
-          </label><br />
-    
-          Ваш пол:<br />
-          <label><input required type="radio" name="radio-group-1" value="val1" /> Мужской</label>
-          <label><input type="radio" name="radio-group-1" value="val2" /> Женский</label><br />
-    
-            <label>Любимый язык программирования:<br>
-              <select required class="sizedselect" name="field-mul" multiple="multiple">
-                <option value="1">Pascal</option>
-                <option value="2">C</option>
-                <option value="3">C++</option>
-                <option value="4">Javascript</option>
-                <option value="5">PHP</option>
-                <option selected value="6">Python</option>
-                <option value="7">Java</option>
-                <option value="8">Haskel</option>
-                <option value="9">Clojure</option>
-                <option value="10">Prolog</option>
-                <option value="11">Scala</option>
-              </select>
-            </label><br>
-    
-          <label>
-            Биография:<br />
-            <textarea name="txtarea" class="noresize" rows="7" cols="40" placeholder="Ваша биография"></textarea>
-          </label><br />
-    
-          
-          <label for="checkboxagree"> <input required type="checkbox" name="check-1" id="checkboxagree" /> С контрактом ознакомлен </label> <br />
-          <br />
-    
-          <input type="submit" value="Сохранить" />
-        </form>
+            </div>
+            
+        
+              <input type="checkbox" id="property"> Комната хостела
+        
+            <button id="calculate">Рассчитать</button>
+        
+            <p id="total"></p>
+          </div>
+      </main>
     </div>
+    
 
-  <div s class="foot">
-    <span ><h4>Рыдзелев Алкексей<h4></span>
-  </s></div>
+    <script>
+      window.addEventListener('DOMContentLoaded', function (event) {
+ let s = document.getElementsByName("product");
+ s[0].addEventListener("change", function(event) {
+ let select = event.target;
+ let radios = document.getElementById("myradios");
+ console.log(select.value);
+ // Можно использовать getElementsByClassName()
+ if (select.value == "product3") {
+ radios.style.display = "none";
+ }
+ else {
+ radios.style.display = "block";
+ }
+ });
+
+ let r = document.querySelectorAll(".myradios input[type=radio]");
+ r.forEach(function(radio) {
+ radio.addEventListener("change", function(event) {
+ let r = event.target;
+ console.log(r.value);
+ });
+ });
+
+});
+
+// Получение элементов калькулятора
+const quantityInput = document.getElementById('quantity');
+const productSelect = document.getElementById('product');
+const calculateButton = document.getElementById('calculate');
+const totalOutput = document.getElementById('total');
+
+// Добавление обработчика события для кнопки расчета
+calculateButton.addEventListener('click', calculateTotal);
+
+// Функция для расчета общей стоимости заказа
+function calculateTotal() {
+  // Получение значения количества товара
+  const quantity = parseInt(quantityInput.value);
+
+  // Получение значения выбранного товара
+  const product = productSelect.value;
+
+  // Проверка наличия корректного значения количества
+  if (isNaN(quantity) || quantity <= 0) {
+    totalOutput.innerText = 'Ошибка: Проверьте введенное количество товара';
+    return;
+  }
+
+  // Расчет общей стоимости в зависимости от выбранного товара
+  let price = 0;
+  switch (product) {
+    case 'product1':
+      price = 20000;
+      break;
+    case 'product2':
+      price = 6000;
+      break;
+    case 'product3':
+      price = 1000;
+      break;
+    default:
+      totalOutput.innerText = 'Ошибка: Выберите товар';
+      return;
+  }
+  let bef =1;
+  let radios = document.querySelectorAll('input[type="radio"]');
+  if (price!=1000){
+	for (let radio of radios) 
+		if (radio.checked) {
+			bef=radio.value;
+		}
+
+}
+
+let rad = document.getElementById('property');
+
+		if (rad.checked) {
+			price=price/2;
+    } 
+
+
+
+  const total = quantity * price*bef;
+
+  // Вывод общей стоимости
+  totalOutput.innerText = `Общая стоимость: ${total} руб.`;
+  
+}
+    </script>
+
 
   </body>
-   
+
 
 
 </html>
