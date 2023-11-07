@@ -1,0 +1,35 @@
+@media screen and (min-width: 980px) /* Desktop */ {
+    table {
+        border-collapse: collapse; 
+        line-height: 1.1;
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+        color: #0C213B;
+    }
+    th {
+        padding: 10px; 
+        border: 1px solid grey;
+    }
+    td {
+        font-size: 0.8em;
+        padding: 5px 7px;
+        border: 1px solid grey;
+    }
+
+}
+@media screen and (max-width: 500px) /* Mobile */ {
+    table {
+        border-collapse: collapse; 
+        line-height: 1.0;
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+        color: #0C213B;
+    }
+    th {
+        padding: 8px; 
+        border: 1px solid grey;
+    }
+    td {
+        font-size: 0.8em;
+        padding: 4px 6px;
+        border: 1px solid grey;
+    }
+}

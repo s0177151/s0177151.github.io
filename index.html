@@ -1,181 +1,327 @@
 <!DOCTYPE html>
+
+<!--
+color: #27292b; grey
+color: #faf0e6; white
+color: #fffff0; white-soft
+color: #ffcbbb; peach
+-->
+
 <html lang="ru">
+  
+  <head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DZ_3</title>
+
+    <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="style/nav.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/table.css">
+
     <style>
       body{
        background-color: #27292b;
-       min-height: 100vh;
       }
     </style>
-
-  <head>
-    <title>Dz_4</title>
-    <meta charset="UTF-8">
-
     <style>
-    h1 {
-    color: #000000;
-    font-size: 200%;
-    font-family: Arial, Verdana, sans-serif;
-    text-align: center;
-
-    }
-    .round-link {
-      display: inline-block;
-      color: #fff;
-      text-decoration: none;
-    }
+      @media screen and (min-width: 980px) /* Desktop */ {
+        #in-aside-wrapper {
+        flex-direction: row;
+        display: flex;
+        }
+        #in-aside-wrapper main, #in-aside-wrapper aside, #in-aside-wrapper fin {
+        background-color: #ddd;
+        margin: 10px;
+        padding: 10px;
+        }
+        #in-aside-wrapper aside {
+        flex: 1;
+        order: 1;
+        }
+        #in-aside-wrapper main {
+        flex: 1;
+        order: 2;
+        }
+        #in-aside-wrapper fin {
+        flex: 1;
+        order: 2;
+        }
+      }
+      @media screen and (max-width: 500px) /* Mobile */ {
+        #in-aside-wrapper {
+        flex-direction: column;
+        display: flex;
+        }
+        #in-aside-wrapper main, #in-aside-wrapper aside, #in-aside-wrapper fin {
+        background-color: #ddd;
+        margin: 10px;
+        padding: 10px;
+        max-width: 100px;
+        }
+        #in-aside-wrapper aside {
+        flex: 1;
+        order: 1;
+        }
+        #in-aside-wrapper main {
+        flex: 1;
+        order: 3;
+        }
+        #in-aside-wrapper fin {
+        flex: 1;
+        order: 2;
+        }
+      }
     </style>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <title>Задани 5 </title>
-   <meta name="viewport" content="width=width-device, initial-scale=1" />
-
-    
-    <link rel="stylesheet" href="style/footer.css">
-    <link rel="stylesheet" href="style/header.css">
-    <link rel="stylesheet" href="style/nav.css">
   </head>
-   
-  <body style="margin: 0px;" >
-    
-      <header>
-      <div class="container_head">
-        <a class="header-logo">
-          <img style="float:left; width:40px; height:40px;" src="234.jpg"/>
-           <h3>Задание 5<h3>
-          </a>
+
+  <!--heading-->
+  <body style="margin:0;"> 
+
+    <div p class="headbox">
+     
+      <img style="float:left; margin:10px; width:100px; height:100px;" img src="234.jpg"  />
+        
+        <div 
+          style="margin:5px; padding: 20px;"> <h1>dz 3</h1>
         </div>
-      </div>
-    </header>
-
-    <div clss="main-nav">
-      <main>
-        <div b class="main"></b>
-          <h1>Калькулятор стоимости заказа</h1>
-          <div class="calculator">
-            <label for="quantity">Количество:</label>
-            <input type="number" id="quantity">
-            
-
-
-            <label for="product">Товар:</label>
-            <select id="product" name="product">
-              <option value="product1">Месяц</option>
-              <option value="product2">Неделя</option>
-              <option value="product3">Суточно</option>
-            </select>
-
-            <div class="myradios" id="myradios">
-              <label><input type="radio" name="myradio" value="1.1" checked>Обед+Ужин </label>
-              <label><input type="radio" name="myradio" value="1.05">Обед</label>
-              <label><input type="radio" name="myradio" value="1">Без него </label>
-
-            </div>
-            
-        
-              <input type="checkbox" id="property"> Комната хостела
-        
-            <button id="calculate">Рассчитать</button>
-        
-            <p id="total"></p>
-          </div>
-      </main>
+      </p>
     </div>
-    
-
-    <script>
-      window.addEventListener('DOMContentLoaded', function (event) {
- let s = document.getElementsByName("product");
- s[0].addEventListener("change", function(event) {
- let select = event.target;
- let radios = document.getElementById("myradios");
- console.log(select.value);
- // Можно использовать getElementsByClassName()
- if (select.value == "product3") {
- radios.style.display = "none";
- }
- else {
- radios.style.display = "block";
- }
- });
-
- let r = document.querySelectorAll(".myradios input[type=radio]");
- r.forEach(function(radio) {
- radio.addEventListener("change", function(event) {
- let r = event.target;
- console.log(r.value);
- });
- });
-
-});
-
-// Получение элементов калькулятора
-const quantityInput = document.getElementById('quantity');
-const productSelect = document.getElementById('product');
-const calculateButton = document.getElementById('calculate');
-const totalOutput = document.getElementById('total');
-
-// Добавление обработчика события для кнопки расчета
-calculateButton.addEventListener('click', calculateTotal);
-
-// Функция для расчета общей стоимости заказа
-function calculateTotal() {
-  // Получение значения количества товара
-  const quantity = parseInt(quantityInput.value);
-
-  // Получение значения выбранного товара
-  const product = productSelect.value;
-
-  // Проверка наличия корректного значения количества
-  if (isNaN(quantity) || quantity <= 0) {
-    totalOutput.innerText = 'Ошибка: Проверьте введенное количество товара';
-    return;
-  }
-
-  // Расчет общей стоимости в зависимости от выбранного товара
-  let price = 0;
-  switch (product) {
-    case 'product1':
-      price = 20000;
-      break;
-    case 'product2':
-      price = 6000;
-      break;
-    case 'product3':
-      price = 1000;
-      break;
-    default:
-      totalOutput.innerText = 'Ошибка: Выберите товар';
-      return;
-  }
-  let bef =1;
-  let radios = document.querySelectorAll('input[type="radio"]');
-  if (price!=1000){
-	for (let radio of radios) 
-		if (radio.checked) {
-			bef=radio.value;
-		}
-
-}
-
-let rad = document.getElementById('property');
-
-		if (rad.checked) {
-			price=price/2;
-    } 
-
-
-
-  const total = quantity * price*bef;
-
-  // Вывод общей стоимости
-  totalOutput.innerText = `Общая стоимость: ${total} руб.`;
   
-}
-    </script>
-
-
+    
   </body>
 
+  <div id="main-aside-wrapper">
+    <linkbox>
+      <body>   
+        <div e class="navMain">
+          <div r class="navHead">
+            Cсылки
+          </r></div>  
+    
+          <body>
+            <div id="in-aside-wrapper">
+              <aside>
+                <a href="#hyperlinks"> сылки</a>
+              </aside>
+              <aside>
+                <a href="#table"> таблици</a>
+              </aside>
+              <aside>
+                <a href="#form"> форма</a>
+              </aside>
+            </div>
+          </body>   
+        </e></div>
+      </body>
+    </linkbox>
+    <!--links
+    <links>
+      <body>   
+        <div e class="navMain">
+            <div r class="navHead">
+              Cсылки
+            </r></div>  
+      
+            <ol>
+              <h3>
+                <li> <a href="#hyperlinks"> links</a> </li>
+                <li> <a href="#table"> table</a> </li>
+                <li> <a href="#form"> form</a> </li>
+              </h3>
+            </ol>    
+          </e></div>
+      </body>
+    </links>-->
+
+    <!--navig-->
+    <navig>
+      <body>
+        <div e class="navMain" id="hyperlinks">
+          <div r class="navHead">
+            Cсылки по страницам проекта и другие
+          </r></div>  
+    
+          <ol>
+            <h3>
+              <li> <a href="http://www.kubsu.ru/index.php" title=""> Ссылка на главную страницу КубГУ http</a> </li>
+              <li> <a href="https://www.kubsu.ru/index.php" title=""> Ссылка на главную страницу КубГУ https</a> </li>
+              <li> <a href="https://clck.ru/35bAgm" title=""> сокращенная ссылка на главную</a> </li>
+              <li> <a href="https://clck.ru/35gdQH" title=""> сокращенная ссылка на внутреннюю</a> </li>
+              <li> <a href="https://ru.wikipedia.org/wiki/Большое_Магелланово_Облако" title=""> ссылка на внутреннюю страницу другого сайта</a> </li>
+              <li> <a href="#Heading" title=""> элемент страницы</a> </li>
+              <li> <a href="https://example.com/page.html?id=123" title=""> ссылка с параметром id</a> </li>
+              <li> <a href="" title=""> пустая ссылка</a> </li>
+              <li> <a href="https://horo.mail.ru/prediction/libra/today/" onclick="return false;" title=""> запрещенная ссылка</a> </li>
+              <li> <a href="https://example.com/?param1=value1&param2=value2&param3=value3" title=""> ссылка с тремя параметрами</a> </li>
+              <li> <a href="ftp://example.com/path/to/file.zip">cсылку на файл на сервере FTP с авторизацией;</a> </li>
+              <li> <img src="fWq16_3yf1U.jpg" style="width: 300px; height: 300px;" alt="numbers" usemap="#num"> 
+                <map name="num"> 
+                  <area shape="rect" coords="0,0,300,150" href="http://vsegda-pomnim.com/uploads/posts/2022-04/1648926013_39-vsegda-pomnim-com-p-vechernii-les-foto-45.jpg" title="" alt="forest">
+                  <area shape="rect" coords="0,150,300,300" href="lake-forest.png" title="" alt="lake">
+                </map>
+              </li>
+              <li> <a href="fishka.html" title=""> fishka.html</a> </li>
+              <li> <a href="about/churchil.html" title=""> about/churchil.html</a> </li>
+              <li> <a href="about/spec/turing-machine.html" title=""> turing-machine.html</a> </li>
+            </h3>
+          </ol>    
+        </e></div>
+      </body>
+    </navig>
 
 
+    
+    <!--forma-->
+    <forma>
+      <body>
+        <div e class="navMain" id="form">
+          <div r class="navHead">
+            Заполнение формы
+          </r></div>
+          
+          <label for="field-fio">
+            <form action="about/churchil.html" id="formid" method="POST">
+    
+              <label for="field-fio">
+                Поле ФИО:<br />
+                <input required id="field-fio" name="field-fio" placeholder="Введите ваше ФИО" />
+              </label><br />
+    
+              <label for="field-tel">
+                Текстовое поле tel:<br /> </label>
+                <input required type="tel" id="field-tel" name="field-tel" placeholder="Введите телефон"/>
+              <br />
+    
+              <label>
+                Текстовое поле email:<br />
+                <input required name="field-email" type="email" placeholder="Введите вашу почту" />
+              </label><br />
+    
+              <label>
+                Дата рождения:<br />
+                <input required name="field-date" value="2023-10-09" type="date" />
+              </label><br />
+    
+              Ваш пол:<br />
+              <label><input required type="radio" name="radio-group-1" value="val1" /> Мужской</label>
+              <label><input type="radio" name="radio-group-1" value="val2" /> Женский</label><br />
+              <label>Любимый язык программирования:<br>
+                <select required class="sizedselect" name="field-mul" multiple="multiple">
+                  <option value="1">Pascal</option>
+                  <option value="2">C</option>
+                  <option value="3">C++</option>
+                  <option value="4">Javascript</option>
+                  <option value="5">PHP</option>
+                  <option selected value="6">Python</option>
+                  <option value="7">Java</option>
+                  <option value="8">Haskel</option>
+                  <option value="9">Clojure</option>
+                  <option value="10">Prolog</option>
+                  <option value="11">Scala</option>
+                </select>
+              </label><br>
+    
+              <label>
+                Биография:<br />
+                <textarea name="txtarea" class="noresize" rows="7" cols="40" placeholder="Ваша биография"></textarea>
+              </label><br />
+          
+              Чекбокс:<br />
+              <label for="checkboxagree"> <input required type="checkbox" name="check-1" id="checkboxagree" /> С контрактом ознакомлен </label> <br />
+              <br />
+          
+              <label>
+              <button type="submit">Сохранить</button>
+              </label><br />
+            </form>
+          </label>
+        </e></div>  
+      </body>
+    </forma>
+
+
+        <!--tuble-->
+        <tuble>
+          <body>  
+            <div e class="navMain" id="table">    
+              <table>      
+                <colgroup>
+                    <col span="2" style="background:rgb(235, 225, 136)">
+                    <col style="background-color:rgb(213, 253, 253)">
+                    <col span="2" style="background:rgb(235, 225, 136)">
+                    <col style="background-color:rgb(213, 253, 253)">
+                    <col style="background:rgb(235, 225, 136)">
+                    <col style="background-color:rgb(213, 253, 253)">
+                </colgroup>
+                <tr>
+                    <th colspan="8">Таблица истинности</th></tr> 
+                <tr>
+                    <td colspan="3">конЪюнкция</td>
+                    <td colspan="3">дизЪюнкция</td>
+                    <td colspan="2">отрицание</td>
+                </tr>  
+                <tr> 
+                    <td colspan="2">значения</td>
+                    <td>результат</td>
+                    <td colspan="2">значения</td>
+                    <td>результат</td>
+                    <td>значения</td>
+                    <td>результат</td>
+                </tr> 
+                <tr>
+                    <td>1</td>  
+                    <td>1</td> 
+                    <td>1</td>  
+                    <td>1</td>
+                    <td>1</td>  
+                    <td>1</td> 
+                    <td>1</td>  
+                    <td>0</td> 
+                </tr>
+                <tr>
+                    <td>1</td>  
+                    <td>0</td> 
+                    <td>0</td>  
+                    <td>1</td>
+                    <td>0</td>  
+                    <td>1</td>
+                    <td>0</td>  
+                    <td>1</td> 
+                </tr>
+                <tr>
+                    <td>0</td>  
+                    <td>1</td> 
+                    <td>0</td>  
+                    <td>0</td>
+                    <td>1</td>  
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>0</td>  
+                    <td>0</td> 
+                    <td>0</td>  
+                    <td>0</td>
+                    <td>0</td>  
+                    <td>0</td>
+                </tr>
+              </table></h2>
+            </e></div>
+          </body>
+        </tuble>
+  </div>
+
+  <!--footer-->
+  <body>
+    <div t class="footerMain"> 
+      <!-- этот блок, как положено блочному элементу по умолчанию, займет всю оставшуюся ширину родительского элемента -->
+      <div>
+        <h3>Рыдзелев</h3>
+      </div>
+    </t>
+    </div>
+  </body>
 </html>

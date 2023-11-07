@@ -1,0 +1,15 @@
+.ffa {
+    display: flex;
+  }
+@media screen and (min-width: 980px) /* Desktop */ {
+    .ffa {
+        
+        flex-direction: row;
+      }
+}
+@media screen and (max-width: 500px) /* Mobile */ {
+    .ffa {
+        
+        flex-direction: column;
+      }
+}

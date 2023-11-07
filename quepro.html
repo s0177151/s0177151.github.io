@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>Flex Box</title>
+    <style>
+        @media screen and (min-width: 980px) /* Desktop */ {
+            #in-aside-wrapper {
+            flex-direction: row;
+            display: flex;
+            }
+            #in-aside-wrapper main, #in-aside-wrapper aside {
+            background-color: #ddd;
+            margin: 10px;
+            padding: 10px;
+            }
+            #in-aside-wrapper aside {
+            flex: 1;
+            order: 1;
+            }
+            #in-aside-wrapper main {
+            flex: 3;
+            order: 2;
+            }
+        }
+        @media screen and (max-width: 500px) /* Mobile */ {
+            #in-aside-wrapper {
+            flex-direction: column;
+            display: flex;
+            }
+            #in-aside-wrapper main, #in-aside-wrapper aside {
+            background-color: #ddd;
+            margin: 10px;
+            padding: 10px;
+            }
+            #in-aside-wrapper aside {
+            flex: 1;
+            order: 1;
+            }
+            #in-aside-wrapper main {
+            flex: 3;
+            order: 2;
+            }
+        }
+    </style>
+  </head>
+
+
+  <body>
+    <div id="in-aside-wrapper">
+      <main>
+        <h1>Главный контент</h1>
+        <p>Вторая строка</p>
+      </main>
+      <aside>Сайдбар</aside>
+      <aside>Сайдбар</aside>
+    </div>
+  </body>
+
+</html> 

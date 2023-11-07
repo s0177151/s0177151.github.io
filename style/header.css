@@ -1,27 +1,94 @@
-h3 {
-    color: #09ff00;
-    font-size: 200%;
-    font-family: Arial, Verdana, sans-serif;
-    text-align: center;
-  }
-  .headerbox{
+h1  {
+    color: #666666;
+    font-size: 150%;
+    font-family: Georgia, Verdana, sans-serif;
+    text-align: left;
+}
+.headbox{
     width:100%; 
-    background-color:#cc0606; 
+    background-color:#aa0909; 
     padding: 10px; 
-    height:130px;
+    height: 120px;
+}
+
+@media screen and (min-width: 980px) /* Desktop */ {
+  #in-aside-wrapper {
+  flex-direction: row;
+  display: flex;
   }
-  .headerlink{
-    background-color:#b16161;  
-    margin-top:0px; 
-    padding:45px;
-    height:30px;
+  #in-aside-wrapper main, #in-aside-wrapper aside {
+  background-color: #ddd;
+  margin: 10px;
+  padding: 10px;
   }
-.headers{
+  #in-aside-wrapper aside {
+  flex: 1;
+  order: 1;
+  }
+  #in-aside-wrapper main {
+  flex: 3;
+  order: 2;
+  }
+}
+
+  .boxoflinkbox{
     float:right; 
     max-width:0 auto; 
-    bottom:20px; 
-    background-color:#b16161; 
-    margin: 15px; 
+    bottom:80px; 
+    margin: 0px; 
     margin-top:0px; 
     padding:12px;
+  }
+  /*.linkbox{
+    float:left; 
+    max-width:0 auto; 
+    bottom:800px; 
+    background-color:#ccc; 
+    margin: 1px; 
+    margin-top:0px; 
+    padding:12px;
+  }max-width:0 auto; 
+    bottom:800px; 
+    background-color:#ccc; 
+    margin: 1px; 
+    margin-top:0px; 
+    padding:12px;*/
+  
+@media screen and (max-width: 500px) /* Mobile */ {
+  #in-aside-wrapper {
+  flex-direction: column;
+  display: flex;
+  }
+  #in-aside-wrapper main, #in-aside-wrapper aside {
+  background-color: #ddd;
+  margin: 10px;
+  padding: 10px;
+  }
+  #in-aside-wrapper aside {
+  flex: 1;
+  order: 1;
+  }
+  #in-aside-wrapper main {
+  flex: 3;
+  order: 2;
+  }
 }
+
+  .boxoflinkbox{
+    float:left; 
+    max-width:0 auto; 
+    max-height:0 auto;
+    bottom: 80px; 
+    margin: 0px; 
+    margin-top:0px; 
+    padding:12px;
+  }
+  /*.linkbox{
+    float:left; 
+    max-width:0 auto; 
+    bottom:300px; 
+    background-color:#ccc; 
+    margin: 1px; 
+    margin-top:0px; 
+    padding:12px;
+  }*/
