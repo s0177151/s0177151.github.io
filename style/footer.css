@@ -1,28 +1,31 @@
-h4  {
-    color: #000080;
+h4 {
+    color: #00f7ff;
     font-size: 100%;
-    font-family: Georgia, Verdana, sans-serif;
+    font-family: Arial, Verdana, sans-serif;
     text-align: center;
-}
+  }
+
 @media screen and (min-width: 980px) /* Desktop */ {
-    .footerMain {
-        margin-top: 20px;
-        width:100%; 
-        background-color:#aa0909; 
-        padding: 10px; 
-        height: 120px;
-        font-size: 200%;
-        font-family: Georgia, Verdana, sans-serif;
-    }
+  .foot{
+    margin-top: 20px;
+    width:100%; 
+    background-color:#884242; 
+    padding: 10px; 
+    height: 120px;
+    font-size: 200%;
+    font-family: Georgia, Verdana, sans-serif;
+  
+}
 }
 @media screen and (max-width: 500px) /* Mobile */ {
-    .footerMain {
-        margin-top: 20px;
-        width:100%; 
-        background-color:#aa0909; 
-        padding: 10px; 
-        height: 120px;
-        font-size: 200%;
-        font-family: Georgia, Verdana, sans-serif;
-    }
+  .foot{
+    margin-top: 20px;
+    width:100%; 
+    background-color:#884242; 
+    padding: 10px; 
+    height: 120px;
+    font-size: 200%;
+    font-family: Georgia, Verdana, sans-serif;
+  
+}
 }
